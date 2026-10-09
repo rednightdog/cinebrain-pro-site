@@ -112,7 +112,7 @@
       </dl>
       <p>The <strong>− / +</strong> buttons move one step of the current range; hold them to repeat, faster the longer you hold. Tap the large value to type an exact distance (for example 2.37 m, or feet and inches), or choose ∞. The <strong>m / ft</strong> switch changes the unit.</p>
       <h3>In the viewfinder</h3>
-      <p>The same distance appears in the viewfinder’s <strong>Focus</strong> tab, and the iPhone camera focuses at about that distance. On iPhones with LiDAR, <strong>Measure distance</strong> measures the point in the center of the frame (up to about 5 m) and writes it in; the <em>LiDAR measuring offset</em> in Project Info is added for the distance between phone and sensor plane.</p>
+      <p>The same distance appears in the viewfinder’s <strong>Focus</strong> tab, and the iPhone camera focuses at about that distance. On iPhones with LiDAR, <strong>Measure distance</strong> measures the point in the center of the frame (up to about 5 m) and writes it in. Other iPhones show <strong>Estimate distance</strong> instead: from the depth data of the two rear cameras, or — on iPhones with one rear camera — roughly from where the autofocus settles. Estimates are marked <strong>≈</strong> here, in the viewfinder and in the frame’s details. In every case the <em>Distance measuring offset</em> in Project Info is added for the distance between phone and sensor plane.</p>
       <h3>Depth of field</h3>
       <p>Depth of field uses the circle of confusion of the chosen format and is shown to the centimeter below 10 m (for example 2.31–2.48 m), or in feet and inches.</p>
     </div>
@@ -144,7 +144,7 @@
       <ul>
         <li><strong>Lens</strong> — choose the focal length.</li>
         <li><strong>Exposure</strong> — choose an aperture or T-stop to preview: the picture brightens or darkens to show the over- or underexposure. The frame you save records this value.</li>
-        <li><strong>Focus</strong> — the focus ring and, on LiDAR iPhones, Measure distance.</li>
+        <li><strong>Focus</strong> — the focus ring and <strong>Measure distance</strong> (LiDAR) or <strong>Estimate distance</strong> (other iPhones, see <a href="#focus">Focus</a>).</li>
       </ul>
       <h3>Format, aspect ratio and anamorphic</h3>
       <p>Tap the format label (in landscape, the ratio on the rail) to open <strong>Format &amp; Ratio</strong>:</p>
@@ -217,7 +217,7 @@
       </ul>
       <h3>Settings (in Project Info)</h3>
       <ul>
-        <li><strong>Distance unit</strong> (m or ft) and <strong>LiDAR measuring offset</strong> (±100 cm; plus if the camera’s sensor is behind the phone).</li>
+        <li><strong>Distance unit</strong> (m or ft) and <strong>Distance measuring offset</strong> (±100 cm; plus if the camera’s sensor is behind the phone). It applies to LiDAR readings and to estimates.</li>
         <li><strong>Meter calibration</strong> — ±3 stops in thirds. Meter the same scene with a light meter and the viewfinder and enter the difference.</li>
         <li><strong>Compass correction</strong> — ±45°.</li>
         <li><strong>Export</strong> — add an info strip (project, scene/shot, format, aspect ratio, anamorphic and protect ratios, lens, exposure, depth of field) under frames saved to Photos, ending with CINEBRAIN PRO; and <strong>Draw protect lines on saved frames</strong> (on by default).</li>
@@ -266,8 +266,13 @@
       <p>The reading comes from the iPhone camera’s own exposure and can differ slightly from a light meter. Compare once and enter the difference in Meter calibration.</p>
       <h3>How accurate is the color reading?</h3>
       <p>Approximate. Use a color meter for critical work. If green light (fluorescent) suggests Plus instead of Minus Green, please tell us.</p>
-      <h3>LiDAR</h3>
-      <p>Only on iPhones with LiDAR (Pro models). It works up to about 5 m. During the measurement the preview pauses for a moment.</p>
+      <h3>LiDAR and estimated distance</h3>
+      <p><strong>LiDAR</strong> (Pro models) measures up to about 5 m. On other iPhones the distance is an estimate, marked ≈:</p>
+      <ul>
+        <li><strong>Depth</strong> — iPhones with two rear cameras compare the two pictures. Best on a detailed surface within a few meters; plain walls, glass and dark scenes are hard.</li>
+        <li><strong>Focus</strong> — iPhones with one rear camera focus on the center and convert the lens position into a distance. This is rough, especially beyond a few meters, where it may read ∞.</li>
+      </ul>
+      <p>LiDAR and depth measuring pause the preview for a moment. If an estimate is off by the same amount every time, set the Distance measuring offset to correct it. The frame’s details show how its distance was found (<em>Distance measured</em>); a distance you set by hand is not marked.</p>
       <h3>Compass and sun marker</h3>
       <p>The iPhone compass is usually within 5–10° and can be disturbed by metal nearby; use Align or Compass correction. The sun marker needs location.</p>
       <h3>The viewfinder frame</h3>
