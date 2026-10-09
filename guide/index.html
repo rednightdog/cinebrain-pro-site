@@ -132,10 +132,10 @@
     </figure>
     <div class="card">
       <h3>What you see</h3>
-      <p>The iPhone camera zooms so that the active lens’s 2.39:1 frame (copper) fills the picture — almost edge to edge in landscape, full width in portrait. The iPhone switches between its ultra-wide, wide and telephoto cameras by itself. Outside the frame is darkened; neighboring lenses are drawn as dashed frames with their focal lengths. If your lens is wider than the phone can show, <strong>◂ Wider ▸</strong> appears.</p>
+      <p>The iPhone camera zooms so that the active lens’s frame (copper, in the chosen aspect ratio) and its protect lines fill the picture — almost edge to edge in landscape, full width in portrait. The iPhone switches between its ultra-wide, wide and telephoto cameras by itself. Outside the frame is darkened; neighboring lenses are drawn as dashed frames with their focal lengths. If your lens is wider than the phone can show, <strong>◂ Wider ▸</strong> appears.</p>
       <h3>Top of the screen</h3>
       <ul>
-        <li><strong>← Wheel</strong>, the format, <strong>Color</strong>, <strong>Archive</strong> and <strong>?</strong>.</li>
+        <li><strong>← Wheel</strong>, the format label, <strong>Color</strong>, <strong>Archive</strong> and <strong>?</strong>. The format label shows the sensor format, the ratio, the anamorphic squeeze and how many protect ratios are on (e.g. <em>Super 35 · 2.39 · 2× · +2</em>); tap it to change them.</li>
         <li><strong>Live · 1.4×</strong> — the phone’s zoom (1× = main camera).</li>
         <li>The <strong>scene · shot</strong> label — tap to open Project Info.</li>
         <li><strong>EV · stops</strong> — the scene light and how far the settings are from correct exposure.</li>
@@ -146,12 +146,21 @@
         <li><strong>Exposure</strong> — choose an aperture or T-stop to preview: the picture brightens or darkens to show the over- or underexposure. The frame you save records this value.</li>
         <li><strong>Focus</strong> — the focus ring and, on LiDAR iPhones, Measure distance.</li>
       </ul>
+      <h3>Format, aspect ratio and anamorphic</h3>
+      <p>Tap the format label (in landscape, the ratio on the rail) to open <strong>Format &amp; Ratio</strong>:</p>
+      <ul>
+        <li><strong>Format</strong> — the sensor format of the current mode (Photo or Cinema).</li>
+        <li><strong>Aspect ratio</strong> — 1.33 (4:3), 1.66, 1.78 (16:9), 1.85, 2.00, 2.20, 2.39, 1:1, and 4:5 and 9:16 for vertical social video, or <strong>Custom</strong> (0.50–3.00 in steps of 0.01). The frame is the largest area of that ratio that fits the sensor: a ratio wider than the sensor is cut from the top and bottom, a narrower one from the sides. The horizontal angle of view and the frame lines follow from it.</li>
+        <li><strong>Anamorphic squeeze</strong> — Spherical, 1.3×, 1.5×, 1.8× or 2×. With an anamorphic lens the horizontal angle widens by the squeeze; the frame and angle of view are worked out on the desqueezed picture, and the chosen ratio is the ratio of the desqueezed picture.</li>
+        <li><strong>Protect</strong> — up to two extra ratios for shoot &amp; protect (e.g. 16:9 for TV and 9:16 for social). Each is the largest area of that ratio on the sensor, drawn as a thin dashed line with a small label in its top-left corner.</li>
+      </ul>
+      <p>With an active project, <strong>Make default for …</strong> stores the ratio, squeeze and protect lines as the project’s default (see <a href="#scout">Project Info</a>).</p>
       <h3>Spot metering</h3>
       <p>Tap anywhere in the picture to meter that point; a ring and its EV appear. <strong>Expose for this point</strong> makes it the scene light (source Spot) and sets the wheel’s aperture to match. <strong>✕</strong> returns to average metering.</p>
       <h3>Sun marker</h3>
       <p>With location and compass, a copper disc shows where the sun is in the picture, or an arrow at the edge points to it. <strong>Backlight</strong> appears when the sun is inside the frame. If the marker is off, center the real sun horizontally and tap <strong>Align</strong> next to it; fine-tune in Project Info › Compass correction.</p>
       <h3>Saving a frame</h3>
-      <p>Press the round copper shutter. The screen flashes and “Saved · Scene 12 · Shot 3” appears. The frame is cropped to the active lens’s 2.39:1 frame and saved in the archive with the lens, format, exposure, filters, focus distance, depth of field, date, project, day, scene and shot, and — when available — location and compass heading. It is also added to Photos, with an info strip below it if you turned that on. With “Advance the shot number with each frame”, the shot number goes up by one.</p>
+      <p>Press the round copper shutter. The screen flashes and “Saved · Scene 12 · Shot 3” appears. The frame is cropped to the active lens’s frame in the chosen ratio and saved in the archive with the lens, format, aspect ratio, anamorphic squeeze, protect ratios, exposure, filters, focus distance, depth of field, date, project, day, scene and shot, and — when available — location and compass heading. It is also added to Photos, with an info strip below it if you turned that on. With “Advance the shot number with each frame”, the shot number goes up by one.</p>
       <p>Turn the phone sideways for the landscape layout: the controls move to a rail on the right, with preset distances in the Focus tab.</p>
     </div>
     <div class="notes"><span class="mono">Field notes</span><!-- notes: viewfinder --></div>
@@ -201,6 +210,7 @@
         <li><strong>Projects</strong> — tap a project to make it active; <em>+ New project</em> creates one. New frames go to the active project.</li>
         <li><strong>Today’s shoot</strong> — day, scene and shot counters with − / +; <em>Advance the shot number with each frame</em>.</li>
         <li><strong>Credits</strong> — project name, director, cinematographer, production and shoot dates; they appear in the archive and on the PDF cover.</li>
+        <li><strong>Frame default</strong> — turn it on to give the project an aspect ratio, anamorphic squeeze and protect lines; when you pick the project, the viewfinder switches to them. You can still change them in the viewfinder.</li>
         <li><strong>Delete project</strong> — its frames stay in the archive.</li>
       </ul>
       <h3>Settings (in Project Info)</h3>
@@ -208,7 +218,7 @@
         <li><strong>Distance unit</strong> (m or ft) and <strong>LiDAR measuring offset</strong> (±100 cm; plus if the camera’s sensor is behind the phone).</li>
         <li><strong>Meter calibration</strong> — ±3 stops in thirds. Meter the same scene with a light meter and the viewfinder and enter the difference.</li>
         <li><strong>Compass correction</strong> — ±45°.</li>
-        <li><strong>Export</strong> — add an info strip (project, scene/shot, format, lens, exposure, depth of field) under frames saved to Photos.</li>
+        <li><strong>Export</strong> — add an info strip (project, scene/shot, format, aspect ratio, anamorphic and protect ratios, lens, exposure, depth of field) under frames saved to Photos.</li>
         <li><strong>Introduction</strong> — watch the tour again, or open this guide.</li>
       </ul>
       <h3>Scout Archive</h3>
@@ -259,7 +269,7 @@
       <h3>Compass and sun marker</h3>
       <p>The iPhone compass is usually within 5–10° and can be disturbed by metal nearby; use Align or Compass correction. The sun marker needs location.</p>
       <h3>The viewfinder frame</h3>
-      <p>The frame is always 2.39:1. Lenses wider than the phone’s ultra-wide camera show “Wider”; very long lenses use digital zoom.</p>
+      <p>Choose the ratio by tapping the format label; 2.39:1 is the default. Anamorphic lenses see wider by their squeeze, so they reach “Wider” sooner. Lenses wider than the phone’s ultra-wide camera show “Wider”; very long lenses use digital zoom.</p>
       <h3>Frames without a light plan</h3>
       <p>Frames saved without location (or before the app had location access) have no light plan; frames without a compass heading have no direction-based moments.</p>
       <h3>The Photos album</h3>
