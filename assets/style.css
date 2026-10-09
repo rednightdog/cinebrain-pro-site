@@ -67,3 +67,48 @@ a { color: var(--copper); }
   box-shadow: 4px 4px 10px var(--shade), -4px -4px 10px var(--light);
 }
 footer { margin-top: 36px; text-align: center; }
+
+/* ---- Kılavuz ---- */
+nav.site { display: flex; gap: 6px; flex-wrap: wrap; }
+.toc ol { margin: 0; padding-left: 22px; columns: 2; column-gap: 24px; }
+.toc li { margin: 4px 0; break-inside: avoid; }
+.toc a { text-decoration: none; }
+section.chapter { scroll-margin-top: 16px; }
+.chapter > h2.big { font-size: clamp(28px, 6vw, 34px); margin: 36px 0 14px; }
+.chapter h3 { font-family: ui-serif, "New York", Georgia, serif; font-weight: 400; font-size: 20px; margin: 16px 0 6px; }
+figure { margin: 18px auto 22px; text-align: center; }
+figure img {
+  width: 100%; max-width: 300px; height: auto; border-radius: 26px; display: block; margin: 0 auto;
+  box-shadow: 6px 7px 18px var(--shade), -6px -6px 18px var(--light);
+}
+figure.pair { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+figure.pair img { max-width: 240px; }
+figcaption { margin-top: 10px; }
+figure.pair figcaption { flex-basis: 100%; }
+.notes {
+  border: 1.5px dashed var(--shade); border-radius: 18px; padding: 14px 18px; min-height: 120px; margin: 4px 0 8px;
+  background: transparent;
+}
+.notes .mono { color: var(--copper); }
+dl.terms { margin: 0; }
+dl.terms dt { font-weight: 600; margin-top: 10px; }
+dl.terms dd { margin: 2px 0 0; }
+.qa h3 { margin-top: 18px; }
+
+@media print {
+  :root { --bg: #FFFFFF; --card: #FFFFFF; --shade: #D6DAE3; --light: #FFFFFF; --ink: #23262E; --mute: #646A79; --slate: #4C5566; --copper: #A2584A; }
+  body { font-size: 11pt; background: #FFFFFF; }
+  main { max-width: none; padding: 0; }
+  header nav, .lang, nav.site { display: none; }
+  .card { box-shadow: none; border: 1px solid #D6DAE3; }
+  .toc { break-inside: avoid; }
+  section.chapter { break-before: page; }
+  h2, h3 { break-after: avoid; }
+  p, li { orphans: 3; widows: 3; }
+  figure { break-inside: avoid; }
+  figure img { max-width: 210px; box-shadow: none; border: 1px solid #D6DAE3; }
+  figure.pair img { max-width: 180px; }
+  .notes { min-height: 140px; break-inside: avoid; }
+  a { color: var(--ink); text-decoration: none; }
+}
+@media (max-width: 520px) { .toc ol { columns: 1; } }
