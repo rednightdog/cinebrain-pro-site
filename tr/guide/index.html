@@ -54,6 +54,7 @@
         <li><strong>Kamera</strong> — vizör, ölçüm ve kare kaydetme.</li>
         <li><strong>Konum, uygulamayı kullanırken</strong> — güneşin konumu ve ışık saatleri. İsteğe bağlı.</li>
         <li><strong>Fotoğraflar, yalnızca ekleme</strong> — kareleri fotoğraf kitaplığına kaydetme.</li>
+        <li><strong>Mikrofon ve Konuşma Tanıma</strong> — bir notun mikrofonunu ilk kez basılı tuttuğunda sorulur; yalnızca sesli notlar için, iPhone’unda tanınır. İsteğe bağlı.</li>
       </ul>
       <p>LiDAR, pusula ve hareket sensörleri izin gerektirmez. Hiçbir veri iPhone’undan çıkmaz; bkz. <a href="../">gizlilik politikası</a>.</p>
       <h3>Dil ve birimler</h3>
@@ -112,7 +113,7 @@
       </dl>
       <p><strong>− / +</strong> bulunduğun aralığın bir adımı kadar ilerler; basılı tutunca tekrarlar ve tuttukça hızlanır. Tam bir mesafe yazmak için büyük değere dokun (örneğin 2,37 m, ya da feet ve inç) ya da ∞’u seç. <strong>m / ft</strong> anahtarı birimi değiştirir.</p>
       <h3>Vizörde</h3>
-      <p>Aynı mesafe vizörün <strong>Netlik</strong> sekmesinde de görünür ve iPhone kamerası yaklaşık o mesafeye netler. LiDAR’lı iPhone’larda <strong>Mesafe ölç</strong>, kadrajın ortasındaki noktayı (yaklaşık 5 m’ye kadar) ölçüp yazar. Diğer iPhone’larda bunun yerine <strong>Mesafe tahmin et</strong> çıkar: iki arka kameranın derinlik verisinden ya da — tek arka kameralı iPhone’larda — otomatik netlemenin oturduğu yerden kabaca hesaplanır. Tahminler burada, vizörde ve kayıt detayında <strong>≈</strong> ile gösterilir. Her durumda telefon ile sensör düzlemi arasındaki fark için Proje Kurulumu’ndaki <em>Mesafe ölçüm ofseti</em> eklenir.</p>
+      <p>Aynı mesafe vizörün <strong>Netlik</strong> sekmesinde de görünür ve iPhone kamerası yaklaşık o mesafeye netler. LiDAR’lı iPhone’larda <strong>Mesafe ölç</strong>, kadrajın ortasındaki noktayı (yaklaşık 5 m’ye kadar) ölçüp yazar. İki arka kameralı iPhone’larda bunun yerine <strong>Mesafe tahmin et</strong> çıkar; iki kameranın derinlik verisinden hesaplanır. Tek arka kameralı iPhone’larda düğme yoktur; mesafeyi elle gir. Kısacası: LiDAR’lı modellerde LiDAR; çift kameralı modellerde derinlikten yaklaşık tahmin; diğer modellerde elle giriş. Tahminler burada, vizörde ve kayıt detayında <strong>≈</strong> ile gösterilir. Her durumda telefon ile sensör düzlemi arasındaki fark için Proje Kurulumu’ndaki <em>Mesafe ölçüm ofseti</em> eklenir.</p>
       <h3>Net alan</h3>
       <p>Net alan, seçili formatın karışıklık dairesiyle hesaplanır ve 10 m altında santimetre hassasiyetle (örneğin 2,31–2,48 m) ya da feet-inç olarak gösterilir.</p>
       <h3>Halkadaki net alan işaretleri</h3>
@@ -146,7 +147,7 @@
       <ul>
         <li><strong>Lens</strong> — odak uzaklığını seç.</li>
         <li><strong>Poz</strong> — önizlemek için bir diyafram ya da T-stop seç: görüntü, fazla ya da az pozu göstermek için aydınlanır ya da kararır. Kaydettiğin kare bu değeri kaydeder.</li>
-        <li><strong>Netlik</strong> — netlik halkası ve <strong>Mesafe ölç</strong> (LiDAR) ya da <strong>Mesafe tahmin et</strong> (diğer iPhone’lar, bkz. <a href="#focus">Netlik</a>).</li>
+        <li><strong>Netlik</strong> — netlik halkası ve <strong>Mesafe ölç</strong> (LiDAR) ya da <strong>Mesafe tahmin et</strong> (çift kameralı iPhone’lar; tek kameralılarda yok, bkz. <a href="#focus">Netlik</a>).</li>
       </ul>
       <h3>Format, en-boy oranı ve anamorfik</h3>
       <p>Format etiketine (yatayda raydaki orana) dokununca <strong>Format ve Oran</strong> açılır:</p>
@@ -162,7 +163,7 @@
       <h3>Güneş işareti</h3>
       <p>Konum ve pusulayla, bakır bir disk güneşin görüntüdeki yerini gösterir; görüntü dışındaysa kenarda bir ok ona yönelir. Güneş çerçevenin içindeyse <strong>Kontrjur</strong> yazar. İşaret kayıksa gerçek güneşi yatayda ortala ve yanındaki <strong>Hizala</strong>’ya bas; ince ayar Proje Kurulumu › Pusula düzeltmesi’nde.</p>
       <h3>Kare kaydetme</h3>
-      <p>Bakır halkalı deklanşöre bas. Ekran bir an parlar ve “Kaydedildi · Sahne 12 · Plan 3” yazar. Kare aktif lensin seçili orandaki çerçevesine kırpılır ve arşive lens, format, en-boy oranı, anamorfik sıkıştırma, koruma oranları, poz, filtreler, netlik mesafesi, net alan, tarih, proje, gün, sahne ve planla — varsa konum ve pusula yönüyle — kaydedilir. Ayrıca Fotoğraflar’a eklenir; açtıysan altına bilgi şeridi basılır. “Her karede planı bir artır” açıksa plan numarası bir artar.</p>
+      <p>Bakır halkalı deklanşöre bas. Ekran bir an parlar ve “Kaydedildi · Sahne 12 · Plan 3” yazar. Kare aktif lensin seçili orandaki çerçevesine kırpılır ve arşive lens, format, en-boy oranı, anamorfik sıkıştırma, koruma oranları, poz, filtreler, netlik mesafesi, net alan, tarih, proje, gün, sahne ve planla — varsa konum ve pusula yönüyle — kaydedilir. Ayrıca Fotoğraflar’a eklenir; açtıysan altına bilgi şeridi basılır. “Her karede planı bir artır” açıksa plan numarası bir artar. Birkaç saniye <strong>Not ekle</strong> görünür: bu kareye not yazmak ya da söylemek için dokun (bkz. <a href="#scout">Sesli not</a>).</p>
       <p>Deklanşörün altındaki küçük seçim (yatayda rayda) kaydedilen karenin pozunu belirler: <strong>Çekim pozu</strong> (varsayılan) vizörde gördüğün simüle edilmiş pozu korur, yani az pozlu bir ayar karanlık kaydedilir; <strong>Normal poz</strong> kaydetmeden önce telefonun bir anlığına doğru pozlamasına izin verir — kadrajı ve mekânı kaydetmek için iyidir. Hangisiyle çekildiği kayıt detayında yazar (<em>Kayıt pozu</em>).</p>
       <p>Koruma oranları kaydedilen karenin üzerine ince kesik çizgi ve küçük etiketle çizilir — kayıt detayında, PDF’te ve Fotoğraflar’daki kopyada. Kareden büyük bir koruma alanının yalnızca kareye düşen çizgileri görünür (ör. 2.39 karede 9:16’nın yanları). Proje Kurulumu › Dışa aktarma’dan kapatılabilir.</p>
       <p>Telefonu yan çevirince yatay düzen gelir: düğmeler sağdaki bir raya geçer; Netlik sekmesinde aynı alan derinliği işaretleriyle dikey bir netlik halkası (∞ yukarıda) ve − / + düğmeleri bulunur.</p>
@@ -220,22 +221,23 @@
       <ul>
         <li><strong>Format</strong> — Fotoğraf ve Sinema için sensör formatı; her mod kendininkini tutar.</li>
         <li><strong>Kadraj</strong> — vizör ve kaydedilen kareler için en-boy oranı, anamorfik sıkıştırma ve koruma çizgileri. Aktif bir proje varsa projeyle de kaydedilir; o proje yeniden seçilince geri gelir.</li>
-        <li><strong>Mesafe birimi</strong> (m ya da ft) ve <strong>Mesafe ölçüm ofseti</strong> (±100 cm; kameranın sensörü telefonun arkasındaysa artı). LiDAR ölçümlerine ve tahminlere eklenir.</li>
+        <li><strong>Mesafe birimi</strong> (m ya da ft) ve <strong>Mesafe ölçüm ofseti</strong> (±100 cm; kameranın sensörü telefonun arkasındaysa artı). LiDAR ölçümlerine ve derinlik tahminlerine eklenir.</li>
         <li><strong>Pozometre düzeltmesi</strong> — üçte bir adımla ±3 stop. Aynı sahneyi el pozometresiyle ve vizörle ölç, farkı gir.</li>
         <li><strong>Pusula düzeltmesi</strong> — ±45°.</li>
-        <li><strong>Dışa aktarma</strong> — Fotoğraflar’a kaydedilen karelerin altına bilgi şeridi (proje, sahne/plan, format, en-boy oranı, anamorfik ve koruma oranları, lens, poz, net alan; sonunda CINEBRAIN PRO) ve <strong>Kaydedilen karelere koruma çizgilerini çiz</strong> (varsayılan açık); ayrıca keşif dosyası için <strong>Sayfa başına kare</strong> (1, 2, 4 ya da 6)</li>
+        <li><strong>Dışa aktarma</strong> — Fotoğraflar’a kaydedilen karelerin altına bilgi şeridi (proje, sahne/plan, format, en-boy oranı, anamorfik ve koruma oranları, lens, poz, net alan; sonunda CINEBRAIN PRO) ve <strong>Kaydedilen karelere koruma çizgilerini çiz</strong> (varsayılan açık); ayrıca keşif dosyası için <strong>Sayfa başına kare</strong> (1 ya da 2).</li>
         <li><strong>Tanıtım</strong> — turu yeniden izle ya da bu kılavuzu aç.</li>
       </ul>
       <h3>Keşif arşivi</h3>
       <p>Vizördeki <strong>Kayıtlar</strong> ile açılır. Kareler projeye (aktif olan en üstte), sonra güne ve sahneye göre gruplanır; her küçük karenin altında plan numarası yazar. Bilgileri için kareye dokun; silmek için basılı tut.</p>
       <h3>Kare detayı</h3>
       <p>Kaydedilen kare, her bilgi kendi kutusunda (format ve en-boy oranı ayrı), <a href="#light-plan">Işık planı</a> ve kendiliğinden kaydedilen bir not alanı.</p>
+      <h3>Sesli not</h3>
+      <p><strong>Not</strong>’un yanında bir mikrofon var. Basılı tut, konuş ve bırak: söylediklerin notun sonuna eklenir. Aynı not kartı, vizörde kare kaydettikten sonra birkaç saniye görünen <strong>Not ekle</strong>’den de açılır. Notlar uygulamanın dilinde (Türkçe ya da İngilizce) ve yalnızca iPhone’unda tanınır: ses kaydedilmez, hiçbir şey bir yere gönderilmez. İlk seferde uygulama Mikrofon ve Konuşma Tanıma izni ister; izin verdikten sonra düğmeyi yeniden basılı tut. iPhone’un uygulamanın dilini cihaz içinde tanıyamıyorsa mikrofon görünmez, notu yazarak girersin.</p>
       <h3>PDF keşif dosyası</h3>
       <p><strong>PDF</strong> bütün proje için, <strong>Gün PDF</strong> tek bir gün için dosya hazırlar. Sonra <strong>Sayfa başına kare</strong>’yi seçip <strong>PDF hazırla</strong>’ya bas; paylaş menüsüyle istediğin yere gönderirsin. Kapakta künye bilgileri bulunur. Seçimin bir sonraki dışa aktarmada hatırlanır; Proje Kurulumu › Dışa aktarma’dan da ayarlanabilir.</p>
       <ul>
         <li><strong>1 · tam sayfa</strong> — büyük görüntü, tüm bilgiler, en uygun ışık saatleri ve geniş çizgili not alanı (ya da not).</li>
         <li><strong>2 · yan yana</strong> — iki kare, her biri tüm bilgileri, ışık saatleri ve not alanıyla.</li>
-        <li><strong>4 · 2 × 2</strong> ve <strong>6 · 3 × 2</strong> — kontak baskı görünümü: sahne ve plan büyük, görüntü, altında tek satırda lens · diyafram ya da T-stop · enstantane ya da açı · net alan; not varsa ilk satırı başlık olarak.</li>
       </ul>
     </div>
     <div class="notes"><span class="mono">Sahadan notlar</span><!-- notlar: keşif --></div>
@@ -275,10 +277,9 @@
       <h3>Renk ölçümü ne kadar doğru?</h3>
       <p>Yaklaşıktır. Kritik işler için bir renk ölçer kullan. Yeşil ışıkta (floresan) Minus yerine Plus Green öneriyorsa lütfen bize yaz.</p>
       <h3>LiDAR ve tahmini mesafe</h3>
-      <p><strong>LiDAR</strong> (Pro modeller) yaklaşık 5 m’ye kadar ölçer. Diğer iPhone’larda mesafe tahminidir ve ≈ ile gösterilir:</p>
+      <p><strong>LiDAR</strong> (Pro modeller) yaklaşık 5 m’ye kadar ölçer. LiDAR’lı modellerde LiDAR; çift kameralı modellerde derinlikten yaklaşık tahmin; diğer modellerde elle giriş. Tahminler ≈ ile gösterilir:</p>
       <ul>
         <li><strong>Derinlik</strong> — iki arka kameralı iPhone’lar iki görüntüyü karşılaştırır. Birkaç metre içindeki dokulu bir yüzeyde en iyisidir; düz duvar, cam ve karanlık sahneler zordur.</li>
-        <li><strong>Odak</strong> — tek arka kameralı iPhone’lar ortaya netler ve lens konumunu mesafeye çevirir. Kabadır, özellikle birkaç metrenin ötesinde; ∞ okuyabilir.</li>
       </ul>
       <p>LiDAR ve derinlik ölçümü sırasında önizleme bir an duraksar. Tahmin her seferinde aynı miktarda kayıyorsa Mesafe ölçüm ofseti ile düzelt. Kayıt detayında mesafenin nasıl bulunduğu yazar (<em>Mesafe ölçümü</em>); elle girilen mesafe işaretlenmez.</p>
       <h3>Pusula ve güneş işareti</h3>

@@ -54,6 +54,7 @@
         <li><strong>Camera</strong> — the viewfinder, metering and saving frames.</li>
         <li><strong>Location, while using the app</strong> — the sun’s position and light times. Optional.</li>
         <li><strong>Photos, add only</strong> — saving frames to your photo library.</li>
+        <li><strong>Microphone and Speech Recognition</strong> — asked the first time you hold a note’s microphone; only for voice notes, recognized on your iPhone. Optional.</li>
       </ul>
       <p>LiDAR, compass and motion sensors need no permission. Nothing leaves your iPhone; see the <a href="../">privacy policy</a>.</p>
       <h3>Language and units</h3>
@@ -112,7 +113,7 @@
       </dl>
       <p>The <strong>− / +</strong> buttons move one step of the current range; hold them to repeat, faster the longer you hold. Tap the large value to type an exact distance (for example 2.37 m, or feet and inches), or choose ∞. The <strong>m / ft</strong> switch changes the unit.</p>
       <h3>In the viewfinder</h3>
-      <p>The same distance appears in the viewfinder’s <strong>Focus</strong> tab, and the iPhone camera focuses at about that distance. On iPhones with LiDAR, <strong>Measure distance</strong> measures the point in the center of the frame (up to about 5 m) and writes it in. Other iPhones show <strong>Estimate distance</strong> instead: from the depth data of the two rear cameras, or — on iPhones with one rear camera — roughly from where the autofocus settles. Estimates are marked <strong>≈</strong> here, in the viewfinder and in the frame’s details. In every case the <em>Distance measuring offset</em> in Project Setup is added for the distance between phone and sensor plane.</p>
+      <p>The same distance appears in the viewfinder’s <strong>Focus</strong> tab, and the iPhone camera focuses at about that distance. On iPhones with LiDAR, <strong>Measure distance</strong> measures the point in the center of the frame (up to about 5 m) and writes it in. iPhones with two rear cameras show <strong>Estimate distance</strong> instead, worked out from the depth data of the two cameras. On iPhones with one rear camera there is no button; set the distance by hand. In short: LiDAR on LiDAR models; an approximate estimate from depth on dual-camera models; manual entry on other models. Estimates are marked <strong>≈</strong> here, in the viewfinder and in the frame’s details. In every case the <em>Distance measuring offset</em> in Project Setup is added for the distance between phone and sensor plane.</p>
       <h3>Depth of field</h3>
       <p>Depth of field uses the circle of confusion of the chosen format and is shown to the centimeter below 10 m (for example 2.31–2.48 m), or in feet and inches.</p>
       <h3>Depth-of-field marks on the ring</h3>
@@ -146,7 +147,7 @@
       <ul>
         <li><strong>Lens</strong> — choose the focal length.</li>
         <li><strong>Exposure</strong> — choose an aperture or T-stop to preview: the picture brightens or darkens to show the over- or underexposure. The frame you save records this value.</li>
-        <li><strong>Focus</strong> — the focus ring and <strong>Measure distance</strong> (LiDAR) or <strong>Estimate distance</strong> (other iPhones, see <a href="#focus">Focus</a>).</li>
+        <li><strong>Focus</strong> — the focus ring and <strong>Measure distance</strong> (LiDAR) or <strong>Estimate distance</strong> (dual-camera iPhones; none on single-camera iPhones, see <a href="#focus">Focus</a>).</li>
       </ul>
       <h3>Format, aspect ratio and anamorphic</h3>
       <p>Tap the format label (in landscape, the ratio on the rail) to open <strong>Format &amp; Ratio</strong>:</p>
@@ -162,7 +163,7 @@
       <h3>Sun marker</h3>
       <p>With location and compass, a copper disc shows where the sun is in the picture, or an arrow at the edge points to it. <strong>Backlight</strong> appears when the sun is inside the frame. If the marker is off, center the real sun horizontally and tap <strong>Align</strong> next to it; fine-tune in Project Setup › Compass correction.</p>
       <h3>Saving a frame</h3>
-      <p>Press the round copper shutter. The screen flashes and “Saved · Scene 12 · Shot 3” appears. The frame is cropped to the active lens’s frame in the chosen ratio and saved in the archive with the lens, format, aspect ratio, anamorphic squeeze, protect ratios, exposure, filters, focus distance, depth of field, date, project, day, scene and shot, and — when available — location and compass heading. It is also added to Photos, with an info strip below it if you turned that on. With “Advance the shot number with each frame”, the shot number goes up by one.</p>
+      <p>Press the round copper shutter. The screen flashes and “Saved · Scene 12 · Shot 3” appears. The frame is cropped to the active lens’s frame in the chosen ratio and saved in the archive with the lens, format, aspect ratio, anamorphic squeeze, protect ratios, exposure, filters, focus distance, depth of field, date, project, day, scene and shot, and — when available — location and compass heading. It is also added to Photos, with an info strip below it if you turned that on. With “Advance the shot number with each frame”, the shot number goes up by one. For a few seconds <strong>Add note</strong> appears: tap it to write or dictate a note for this frame (see <a href="#scout">Voice notes</a>).</p>
       <p>The small switch under the shutter (on the rail in landscape) chooses the exposure of the saved frame: <strong>Shoot exp.</strong> (default) keeps the simulated exposure you see in the viewfinder, so an underexposed setting is saved dark; <strong>Normal exp.</strong> lets the phone expose correctly for a moment before saving — good for recording the framing and the location. The frame’s details show which one was used (<em>Saved exposure</em>).</p>
       <p>Protect ratios are drawn on the saved frame as thin dashed lines with a small label — in the frame details, the PDF and the copy in Photos. A protect area larger than the frame shows only the lines that fall inside it (e.g. the sides of 9:16 on a 2.39 frame). Turn this off in Project Setup › Export.</p>
       <p>Turn the phone sideways for the landscape layout: the controls move to a rail on the right, and the Focus tab shows a vertical focus ring (∞ at the top) with the same depth-of-field marks and − / + buttons.</p>
@@ -220,22 +221,23 @@
       <ul>
         <li><strong>Format</strong> — the sensor format for Photo and for Cinema; each mode keeps its own.</li>
         <li><strong>Frame</strong> — aspect ratio, anamorphic squeeze and protect lines for the viewfinder and saved frames. With an active project it is also saved with the project and comes back when you pick that project again.</li>
-        <li><strong>Distance unit</strong> (m or ft) and <strong>Distance measuring offset</strong> (±100 cm; plus if the camera’s sensor is behind the phone). It applies to LiDAR readings and to estimates.</li>
+        <li><strong>Distance unit</strong> (m or ft) and <strong>Distance measuring offset</strong> (±100 cm; plus if the camera’s sensor is behind the phone). It applies to LiDAR readings and to depth estimates.</li>
         <li><strong>Meter calibration</strong> — ±3 stops in thirds. Meter the same scene with a light meter and the viewfinder and enter the difference.</li>
         <li><strong>Compass correction</strong> — ±45°.</li>
-        <li><strong>Export</strong> — add an info strip (project, scene/shot, format, aspect ratio, anamorphic and protect ratios, lens, exposure, depth of field) under frames saved to Photos, ending with CINEBRAIN PRO; <strong>Draw protect lines on saved frames</strong> (on by default); and <strong>Frames per page</strong> for scout reports (1, 2, 4 or 6).</li>
+        <li><strong>Export</strong> — add an info strip (project, scene/shot, format, aspect ratio, anamorphic and protect ratios, lens, exposure, depth of field) under frames saved to Photos, ending with CINEBRAIN PRO; <strong>Draw protect lines on saved frames</strong> (on by default); and <strong>Frames per page</strong> for scout reports (1 or 2).</li>
         <li><strong>Introduction</strong> — watch the tour again, or open this guide.</li>
       </ul>
       <h3>Scout Archive</h3>
       <p>Open it with <strong>Archive</strong> in the viewfinder. Frames are grouped by project (the active one first), then by day and scene, with the shot number under each thumbnail. Tap a frame for its details; touch and hold to delete it.</p>
       <h3>Frame details</h3>
       <p>The saved frame, each detail in its own box (format and aspect ratio separately), the <a href="#light-plan">Light Plan</a> and a note field that saves itself.</p>
+      <h3>Voice notes</h3>
+      <p>Next to <strong>Note</strong> there is a microphone. Touch and hold it, speak, and release: what you said is added to the end of the note. The same note card opens from <strong>Add note</strong>, which appears for a few seconds after you save a frame in the viewfinder. Notes are recognized in the app’s language (English or Turkish), on your iPhone only: the sound is not recorded and nothing is sent anywhere. The first time, the app asks for Microphone and Speech Recognition access; hold the button again once you have allowed it. If your iPhone cannot recognize the app’s language on the device, the microphone is not shown and you type the note.</p>
       <h3>PDF scout report</h3>
       <p><strong>PDF</strong> makes a report for the whole project, <strong>Day PDF</strong> for one day. Then pick <strong>Frames per page</strong> and tap <strong>Make PDF</strong>; the share sheet sends it where you like. The cover carries the credits. Your choice is remembered for the next export and can also be set in Project Setup › Export.</p>
       <ul>
         <li><strong>1 · full page</strong> — a large picture with every detail, the best light times and a wide lined notes area (or the note).</li>
         <li><strong>2 · side by side</strong> — two frames, each with all its details, light times and notes area.</li>
-        <li><strong>4 · 2 × 2</strong> and <strong>6 · 3 × 2</strong> — a contact-sheet view: scene and shot large, the picture, then one line with lens · aperture or T-stop · shutter or angle · depth of field, and the first line of the note as its title if there is one.</li>
       </ul>
     </div>
     <div class="notes"><span class="mono">Field notes</span><!-- notes: scout --></div>
@@ -275,10 +277,9 @@
       <h3>How accurate is the color reading?</h3>
       <p>Approximate. Use a color meter for critical work. If green light (fluorescent) suggests Plus instead of Minus Green, please tell us.</p>
       <h3>LiDAR and estimated distance</h3>
-      <p><strong>LiDAR</strong> (Pro models) measures up to about 5 m. On other iPhones the distance is an estimate, marked ≈:</p>
+      <p><strong>LiDAR</strong> (Pro models) measures up to about 5 m. LiDAR on LiDAR models; an approximate estimate from depth on dual-camera models; manual entry on other models. Estimates are marked ≈:</p>
       <ul>
         <li><strong>Depth</strong> — iPhones with two rear cameras compare the two pictures. Best on a detailed surface within a few meters; plain walls, glass and dark scenes are hard.</li>
-        <li><strong>Focus</strong> — iPhones with one rear camera focus on the center and convert the lens position into a distance. This is rough, especially beyond a few meters, where it may read ∞.</li>
       </ul>
       <p>LiDAR and depth measuring pause the preview for a moment. If an estimate is off by the same amount every time, set the Distance measuring offset to correct it. The frame’s details show how its distance was found (<em>Distance measured</em>); a distance you set by hand is not marked.</p>
       <h3>Compass and sun marker</h3>
