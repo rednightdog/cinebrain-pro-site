@@ -90,7 +90,7 @@
       <h3>Çarkın altında</h3>
       <ul>
         <li><strong>Filtreler</strong> satırı (filtre takılıysa) ve <strong>konuya uzaklık</strong> kartı — bkz. <a href="#focus">Netlik</a>.</li>
-        <li>Büyük yazıyla diyafram, enstantane ve ISO; ardından <strong>alan derinliği</strong> kartı: yakın ve uzak sınırlar, hiperfokal mesafe, sensör ölçüsü, kırpma oranı, karışıklık dairesi (CoC) ve lensin o anki netlik mesafesindeki yaklaşık yatay görüş açısı.</li>
+        <li>Büyük yazıyla diyafram, enstantane ve ISO; ardından <strong>alan derinliği</strong> kartı: yakın ve uzak sınırlar, hiperfokal mesafe, sensör ölçüsü, kırpma oranı, karışıklık dairesi (CoC), lensin o anki netlik mesafesindeki yaklaşık yatay görüş açısı ve kadrajın netlik mesafesindeki yaklaşık genişlik × yüksekliği (örn. “Kadraj 3,00 m'de ≈1,44 × 0,60 m”). Vizör aynı boyutu aktif çerçevenin etiketinin altında, netlik dairesini de net alanın yanında gösterir (“NET 2,77–3,27 m · CoC 0,025”).</li>
         <li><strong>Renk sıcaklığı</strong> kartı <a href="#color">Renk</a> ekranını açar.</li>
         <li><strong>Format</strong> — Fotoğraf: Micro 4/3, APS-C, Full frame, Orta format. Sinema: Super 16, Super 35, Large format, 65 mm. <strong>Kare hızı</strong> (Sinema): 24 ile 120.</li>
         <li><strong>Filtreler</strong> — <em>+ Filtre ekle</em> ile: ND 0.3–2.1, polarize (≈1⅔ stop), 85 ve 85B (⅔), 80A (2), 81A (⅓), difüzyon ⅛–1 (ışık kaybı yok) ya da stop olarak girilen özel bir kayıp. Çıkarmak için filtreye dokun. Toplam kayıp pozlamaya girer.</li>
@@ -222,6 +222,8 @@
       <ul>
         <li><strong>Format</strong> — Fotoğraf ve Sinema için sensör formatı; her mod kendininkini tutar.</li>
         <li><strong>Kadraj</strong> — vizör ve kaydedilen kareler için en-boy oranı, anamorfik sıkıştırma ve koruma çizgileri. Aktif bir proje varsa projeyle de kaydedilir; o proje yeniden seçilince geri gelir.</li>
+        <li><strong>Netlik dairesi</strong> — net alanın hesaplandığı bulanıklık ölçüsü. Tek bir standart yok: <strong>Standart</strong> Super 16 için 0,015 mm (ASC Manual), Super 35 için 0,025 mm (ASC, Cooke), diğer formatlarda yaklaşık köşegen/1500 kullanır; <strong>Köşegen/1000</strong> geleneksel, <strong>Köşegen/1500</strong> modern kuraldır (Zeiss); <strong>Özel</strong> 0,005–0,1 mm kabul eder. Karşılaştırma için 1982 Guild Kelly hesap çarkı 35 mm'de 0,0359 mm kullanıyordu. Projeyle saklanır.</li>
+        <li><strong>T–f farkı</strong> — 0, ⅙, ⅓ ya da ½ stop (varsayılan 0). Sinema lensleri T-stop ile işaretlenir ama net alan biraz daha küçük olan f-sayısına bağlıdır. Fark seçiliyse Sinema modunda net alan ve hiperfokal mesafe f = T / 2^(fark/2) ile hesaplanır ve ≈ ile gösterilir; 0'da T ile hesaplanır ve çark gerçek net alanın biraz daha dar olduğunu not eder.</li>
         <li><strong>Mesafe birimi</strong> (m ya da ft) ve <strong>Mesafe ölçüm ofseti</strong> (±100 cm; kameranın sensörü telefonun arkasındaysa artı). LiDAR ölçümlerine ve derinlik tahminlerine eklenir.</li>
         <li><strong>Pozometre düzeltmesi</strong> — üçte bir adımla ±3 stop. Aynı sahneyi el pozometresiyle ve vizörle ölç, farkı gir.</li>
         <li><strong>Pusula düzeltmesi</strong> — ±45°.</li>
