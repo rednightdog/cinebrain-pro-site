@@ -164,6 +164,16 @@
       <p>The ratio, squeeze and protect lines you pick here last <strong>only for this session</strong>: Project Setup keeps its own value (shown at the top of the panel). <strong>Back to Project Setup</strong> drops the change; <strong>Save to Project Setup</strong> makes it the new setting. The format is the same setting as on the wheel and in Project Setup.</p>
       <h3>Spot metering</h3>
       <p>Tap anywhere in the picture to meter that point; a ring and its EV appear. <strong>Expose for this point</strong> makes it the scene light (source Spot) and sets the wheel’s aperture to match. <strong>✕</strong> returns to average metering.</p>
+      <h3 id="contrast-map">Contrast map</h3>
+      <p>Tap <strong>Contrast</strong> (top left of the picture) to measure up to five points of the scene, one after another. Each tap meters that point with the phone’s auto exposure and waits until it settles (a small spinner shows on the point); the value is the median of the readings over half a second. If it hasn’t settled after 3 seconds, the last reading is used and marked <strong>≈</strong>. On iOS 26 and later, where the phone supports it, a small metering rectangle is used and its angle is shown as <em>Spot ≈ 4°</em>; on earlier systems the angle can’t be read, so it says <em>Spot ≈ ?</em>.</p>
+      <ul>
+        <li><strong>Key</strong> — the first point is the key and sits on Zone V. Tap a point to make it the key or, on the key, to choose its zone (0–X); hold a point to delete it; <strong>Clear</strong> removes them all.</li>
+        <li><strong>Differences</strong> — next to each point: its number and its difference from the key in stops, rounded to the nearest third (<em>2 · +1⅔</em>); the full value is used for the calculations. Zone = key zone + difference (1 stop = 1 zone), shown on the thin zone scale (0–X) on the right edge, where Zones II–VIII — the range that still holds texture, ±3½ stops around a Zone V key — are marked. Points outside it say <strong>No texture</strong>.</li>
+        <li><strong>SBR</strong> — the brightest minus the darkest point, against the target in Project Setup (default 7 stops): <em>SBR 6⅓ · Target 7</em>; above the target it turns copper.</li>
+        <li><strong>Expose for key</strong> — sets the scene light so the key lands on its zone: scene EV = key EV − (key zone − 5). Skin placed on Zone VI gets one stop more exposure.</li>
+      </ul>
+      <p>Closing Contrast returns the camera to its previous metering. A frame saved with the contrast map on keeps the points, the key and its zone, the SBR, the target, the calibration and the spot angle; the frame details, the PDF and the copy in Photos show the numbered points, a zone summary and the SBR.</p>
+      <p>The phone’s meter is accurate to about ⅓ stop. Differences are not affected by calibration; for absolute values, set Meter calibration against a reference light meter.</p>
       <h3>Sun marker</h3>
       <p>With location and compass, a copper disc shows where the sun is in the picture, or an arrow at the edge points to it (kept clear of the info lines at the top and bottom). <strong>Backlight</strong> appears when the sun is inside the frame. If the marker is off, center the real sun horizontally and tap <strong>Align</strong> next to it; fine-tune in Project Setup › Compass correction.</p>
       <h3>Saving a frame</h3>
@@ -172,6 +182,14 @@
       <p>Protect ratios are drawn on the saved frame as thin dashed lines with a small label — in the frame details, the PDF and the copy in Photos. A protect area larger than the frame shows only the lines that fall inside it (e.g. the sides of 9:16 on a 2.39 frame). Turn this off in Project Setup › Export.</p>
       <p>Turn the phone sideways for the landscape layout: the controls move to a rail on the right with the same layout — the values in a 2 × 2 grid (Lens · Exposure / Focus · EI), the picker, and Note · shutter · saved exposure at the bottom (icons only) — and Focus shows a vertical focus ring (∞ at the top) with the same depth-of-field marks and − / + buttons.</p>
     </div>
+    <figure>
+      <img src="img/contrast.png" alt="Contrast map: five numbered points, zone scale on the right, SBR above the target">
+      <figcaption class="mono">Viewfinder · contrast map</figcaption>
+    </figure>
+    <figure class="wide">
+      <img src="img/contrast-landscape.png" alt="Contrast map in landscape">
+      <figcaption class="mono">Viewfinder · contrast map, landscape</figcaption>
+    </figure>
     <div class="notes"><span class="mono">Field notes</span><!-- notes: viewfinder --></div>
   </section>
 
@@ -230,6 +248,7 @@
         <li><strong>Circle of confusion</strong> — the blur size depth of field is worked out with. There is no single standard: <strong>ASC</strong> (default) uses Super 35 0.025 mm and Super 16 0.015 mm; <strong>Cooke</strong> Super 35 0.025 mm and Super 16 0.0125 mm; for the other cinema formats (Full Frame, large format, 65 mm) both use 0.025 mm × format diagonal / 31.11 mm, the Super 35 diagonal; <strong>Zeiss d/1500</strong> is the format diagonal / 1500; <strong>Custom</strong> takes 0.005–0.1 mm. Photo formats have their own choice and never use the Super 35 scaling: <strong>Zeiss d/1500</strong> (default: format diagonal / 1500, about 0.029 mm on full frame; H. H. Nasse, “Depth of Field and Bokeh”, Carl Zeiss), <strong>Canon</strong> (full frame 0.035 mm, APS-C 0.019 mm; Canon Europe Pro, “Depth of field”; offered only for those two formats) or <strong>Custom</strong>; ASC and Cooke are cinema standards and are not offered there. For comparison, the 1982 Guild Kelly calculator used 0.0359 mm for 35 mm. The value in use is shown with its standard (“CoC 0.025 mm · ASC”, “CoC 0.0288 mm · Zeiss”). Saved with the project.</li>
         <li><strong>T–f difference</strong> — 0, ⅒ or ⅓ stop (default 0). Cinema lenses are marked in T-stops, but depth of field depends on the f-number, which is a little smaller. Exposure (the wheel, EV, ND) always uses T. With a difference set, Cinema-mode depth of field and hyperfocal distance use f = T / 2^(difference/2) and are shown with ≈; at 0 they are worked out from T and the wheel notes that the real depth of field may be a little shallower.</li>
         <li><strong>Meter calibration</strong> — ±3 stops in thirds. Meter the same scene with a light meter and the viewfinder and enter the difference.</li>
+        <li><strong>Contrast target (SBR)</strong> — the scene range the viewfinder’s contrast map compares the brightest and darkest points with, in thirds of a stop (default 7), e.g. your camera’s usable dynamic range.</li>
         <li><strong>Compass correction</strong> — ±45°.</li>
         <li><strong>Export</strong> — add an info strip (project, scene/shot, format, aspect ratio, anamorphic and protect ratios, lens, exposure, depth of field) under frames saved to Photos, ending with CINEBRAIN PRO; <strong>Draw protect lines on saved frames</strong> (on by default); and <strong>Frames per page</strong> for scout reports (1 or 2).</li>
         <li><strong>Introduction</strong> — watch the tour again, or open this guide.</li>

@@ -164,6 +164,16 @@
       <p>Burada seçilen oran, sıkıştırma ve koruma çizgileri <strong>yalnızca bu oturum için</strong> geçerlidir: Proje Kurulumu kendi değerini korur (panelin üstünde yazar). <strong>Proje Kurulumu’na dön</strong> değişikliği bırakır; <strong>Proje Kurulumu’na kaydet</strong> onu yeni ayar yapar. Format, çarktaki ve Proje Kurulumu’ndaki ile aynı ayardır.</p>
       <h3>Spot ölçüm</h3>
       <p>O noktayı ölçmek için görüntünün herhangi bir yerine dokun; bir halka ve EV değeri çıkar. <strong>Bu noktaya göre pozla</strong> onu sahne ışığı yapar (kaynak Spot) ve çarkın diyaframını ona göre ayarlar. <strong>✕</strong> ortalama ölçüme döner.</p>
+      <h3 id="contrast-map">Kontrast haritası</h3>
+      <p>Sahnenin en fazla beş noktasını sırayla ölçmek için <strong>Kontrast</strong>’a (görüntünün sol üstü) dokun. Her dokunuş o noktayı telefonun otomatik pozlamasıyla ölçer ve oturmasını bekler (noktada küçük bir bekleme göstergesi çıkar); değer yarım saniyedeki okumaların medyanıdır. 3 saniyede oturmazsa son okuma alınır ve <strong>≈</strong> ile işaretlenir. iOS 26 ve sonrasında, telefon destekliyorsa küçük bir ölçüm dikdörtgeni kullanılır ve açısı <em>Spot ≈ 4°</em> diye gösterilir; eski sistemlerde açı okunamadığı için <em>Spot ≈ ?</em> yazar.</p>
+      <ul>
+        <li><strong>Anahtar</strong> — ilk nokta anahtardır ve Zone V’e yerleşir. Bir noktaya dokunup anahtar yapabilir, anahtara dokunup zonunu (0–X) seçebilirsin; silmek için noktaya basılı tut; <strong>Temizle</strong> hepsini siler.</li>
+        <li><strong>Farklar</strong> — her noktanın yanında numarası ve anahtardan farkı stop cinsinden, en yakın ⅓’e yuvarlanmış (<em>2 · +1⅔</em>); hesaplarda tam değer kullanılır. Zon = anahtar zonu + fark (1 stop = 1 zon); sağ kenardaki ince zon cetvelinde (0–X) gösterilir. Cetvelde Zone II–VIII belirgindir: dokunun hâlâ seçildiği aralık, Zone V’teki anahtarın ±3½ stop çevresi. Dışına düşen nokta <strong>Doku yok</strong> der.</li>
+        <li><strong>SBR</strong> — en parlak ile en karanlık nokta arasındaki fark, Proje Kurulumu’ndaki hedefle (varsayılan 7 stop): <em>SBR 6⅓ · Hedef 7</em>; hedefi aşarsa bakır olur.</li>
+        <li><strong>Anahtara göre pozla</strong> — sahne ışığını, anahtar kendi zonuna düşecek şekilde ayarlar: sahne EV’si = anahtar EV’si − (anahtar zonu − 5). Zone VI’ya konan ten bir stop fazla poz alır.</li>
+      </ul>
+      <p>Kontrast kapanınca kamera önceki ölçümüne döner. Kontrast haritası açıkken kaydedilen kare noktaları, anahtarı ve zonunu, SBR’yi, hedefi, kalibrasyonu ve spot açısını saklar; kayıt detayı, PDF ve Fotoğraflar’daki kopya numaralı noktaları, zon özetini ve SBR’yi gösterir.</p>
+      <p>Telefon pozometresi yaklaşık ⅓ stop hassasiyetindedir; farklar kalibrasyondan etkilenmez, mutlak değerler için Pozometre düzeltmesini referans pozometreye göre ayarlayın.</p>
       <h3>Güneş işareti</h3>
       <p>Konum ve pusulayla, bakır bir disk güneşin görüntüdeki yerini gösterir; görüntü dışındaysa kenarda bir ok ona yönelir (üstteki ve alttaki bilgi satırlarına binmez). Güneş çerçevenin içindeyse <strong>Kontrjur</strong> yazar. İşaret kayıksa gerçek güneşi yatayda ortala ve yanındaki <strong>Hizala</strong>’ya bas; ince ayar Proje Kurulumu › Pusula düzeltmesi’nde.</p>
       <h3>Kare kaydetme</h3>
@@ -172,6 +182,14 @@
       <p>Koruma oranları kaydedilen karenin üzerine ince kesik çizgi ve küçük etiketle çizilir — kayıt detayında, PDF’te ve Fotoğraflar’daki kopyada. Kareden büyük bir koruma alanının yalnızca kareye düşen çizgileri görünür (ör. 2.39 karede 9:16’nın yanları). Proje Kurulumu › Dışa aktarma’dan kapatılabilir.</p>
       <p>Telefonu yan çevirince yatay düzen gelir: düğmeler aynı düzenle sağdaki bir raya geçer — değerler 2 × 2 ızgarada (Lens · Poz / Netlik · EI), seçici ve en altta Not · deklanşör · kayıt pozu (yalnızca simge) — ve Netlik’te aynı alan derinliği işaretleriyle dikey bir netlik halkası (∞ yukarıda) ve − / + düğmeleri bulunur.</p>
     </div>
+    <figure>
+      <img src="img/contrast.png" alt="Kontrast haritası: beş numaralı nokta, sağda zon cetveli, hedefi aşan SBR">
+      <figcaption class="mono">Vizör · kontrast haritası</figcaption>
+    </figure>
+    <figure class="wide">
+      <img src="img/contrast-landscape.png" alt="Yatayda kontrast haritası">
+      <figcaption class="mono">Vizör · kontrast haritası, yatay</figcaption>
+    </figure>
     <div class="notes"><span class="mono">Sahadan notlar</span><!-- notlar: vizör --></div>
   </section>
 
@@ -230,6 +248,7 @@
         <li><strong>T–f farkı</strong> — 0, ⅒ ya da ⅓ stop (varsayılan 0). Sinema lensleri T-stop ile işaretlenir ama net alan biraz daha küçük olan f-sayısına bağlıdır. Pozlama (çark, EV, ND) her zaman T ile hesaplanır. Fark seçiliyse Sinema modunda net alan ve hiperfokal mesafe f = T / 2^(fark/2) ile hesaplanır ve ≈ ile gösterilir; 0'da T ile hesaplanır ve çark gerçek alan derinliğinin biraz daha dar olabileceğini not eder.</li>
         <li><strong>Mesafe birimi</strong> (m ya da ft) ve <strong>Mesafe ölçüm ofseti</strong> (±100 cm; kameranın sensörü telefonun arkasındaysa artı). LiDAR ölçümlerine ve derinlik tahminlerine eklenir.</li>
         <li><strong>Pozometre düzeltmesi</strong> — üçte bir adımla ±3 stop. Aynı sahneyi el pozometresiyle ve vizörle ölç, farkı gir.</li>
+        <li><strong>Kontrast hedefi (SBR)</strong> — vizördeki kontrast haritasının en parlak ve en karanlık noktayı karşılaştırdığı sahne aralığı, üçte bir stop adımlarla (varsayılan 7); örneğin kameranın kullanılabilir dinamik aralığı.</li>
         <li><strong>Pusula düzeltmesi</strong> — ±45°.</li>
         <li><strong>Dışa aktarma</strong> — Fotoğraflar’a kaydedilen karelerin altına bilgi şeridi (proje, sahne/plan, format, en-boy oranı, anamorfik ve koruma oranları, lens, poz, net alan; sonunda CINEBRAIN PRO) ve <strong>Kaydedilen karelere koruma çizgilerini çiz</strong> (varsayılan açık); ayrıca keşif dosyası için <strong>Sayfa başına kare</strong> (1 ya da 2).</li>
         <li><strong>Tanıtım</strong> — turu yeniden izle ya da bu kılavuzu aç.</li>

@@ -85,6 +85,7 @@ figure.pair { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap
 figure.pair img { max-width: 240px; }
 figcaption { margin-top: 10px; }
 figure.pair figcaption { flex-basis: 100%; }
+figure.wide img { max-width: 620px; border-radius: 18px; }
 .notes {
   border: 1.5px dashed var(--shade); border-radius: 18px; padding: 14px 18px; min-height: 120px; margin: 4px 0 8px;
   background: transparent;
@@ -108,6 +109,7 @@ dl.terms dd { margin: 2px 0 0; }
   figure { break-inside: avoid; }
   figure img { max-width: 210px; box-shadow: none; border: 1px solid #D6DAE3; }
   figure.pair img { max-width: 180px; }
+  figure.wide img { max-width: 440px; }
   .notes { min-height: 140px; break-inside: avoid; }
   a { color: var(--ink); text-decoration: none; }
 }
