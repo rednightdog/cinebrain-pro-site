@@ -267,22 +267,28 @@
       <p>Three pictures of the place can go into the PDF, to the left of the light times:</p>
       <ul>
         <li><strong>Sketch</strong> — <strong>Add sketch</strong>: take a photo of a hand-drawn plan or pick one from Photos (the system picker hands over only the photo you choose; no photo library access is asked). <strong>Replace sketch</strong> and <strong>Delete sketch</strong> change it.</li>
-        <li><strong>Map</strong> — when a frame has a location and the iPhone is online, a satellite image of about 150 m around the camera (north up) is saved with the frame, so the PDF can be made offline later. On it: the camera (copper dot), the lens’s field of view as a cone, the sun’s direction for each hour from sunrise to sunset with the hour, the sun’s direction when the frame was saved, and a 50 m scale. If there was no connection, <strong>Get the map</strong> in the frame details fetches it. The Apple Maps logo stays on the image.</li>
+        <li><strong>Map</strong> — only with <strong>Satellite map</strong> turned on in Project Setup (off by default; the first time, a note explains that the frame’s location is sent to Apple Maps): when a frame has a location and the iPhone is online, a satellite image of about 150 m around the camera (north up) is saved with the frame, so the PDF can be made offline later. On it: the camera (copper dot), the lens’s field of view as a cone, the sun’s direction for each hour from sunrise to sunset with the hour, the sun’s direction when the frame was saved, and a 50 m scale. If there was no connection, <strong>Get the map</strong> in the frame details fetches it (shown only while the setting is on). Maps already saved stay with their frames when you turn it off. The Apple Maps logo stays on the image.</li>
         <li><strong>Sun diagram</strong> — the sun’s path that day seen from above, hour marks, the frame’s field of view and the sun at the frame time.</li>
       </ul>
       <p><strong>Show in the PDF</strong> picks one; without a choice the order is sketch, map, sun diagram. A portrait sketch keeps its proportions. The light times list stays in every case.</p>
-      <figure class="wide">
-        <img src="img/pdf-place.png" alt="PDF page: sketch and satellite map next to the light times list">
-        <figcaption class="mono">PDF · sketch and satellite map beside the light times</figcaption>
-      </figure>
       <h3>Voice notes</h3>
       <p>Next to <strong>Note</strong> there is a microphone. Touch and hold it, speak, and release: what you said is added to the end of the note. The same note card opens from the <strong>Note</strong> button beside the viewfinder’s shutter, for the last saved frame. Notes are recognized in the app’s language (English or Turkish), on your iPhone only: the sound is not recorded and nothing is sent anywhere. The first time, the app asks for Microphone and Speech Recognition access; hold the button again once you have allowed it. If your iPhone cannot recognize the app’s language on the device, the microphone is not shown and you type the note.</p>
       <h3>PDF scout report</h3>
-      <p><strong>PDF</strong> makes a report for the whole project, <strong>Day PDF</strong> for one day. Then pick <strong>Frames per page</strong> and tap <strong>Make PDF</strong>; the share sheet sends it where you like. The cover carries the credits. Your choice is remembered for the next export and can also be set in Project Setup › Export.</p>
+      <p><strong>PDF</strong> makes a report for the whole project, <strong>Day PDF</strong> for one day. Pick the <strong>PDF type</strong>, choose whether to <strong>Add technical appendix</strong> (on by default) and tap <strong>Make PDF</strong>; the share sheet sends it where you like. Your choice is remembered and can also be set in Project Setup › Export. PDFs are made on the iPhone, with no internet; texts follow the app’s language.</p>
       <ul>
-        <li><strong>1 · full page</strong> — a large picture with every detail, the best light times and a wide lined notes area (or the note).</li>
-        <li><strong>2 · side by side</strong> — two frames, each with all its details, light times and notes area.</li>
+        <li><strong>Scout plan</strong> (A4 portrait, one frame per page) — project · scene, location coordinates, frame number and date; camera · mode · ratio (or format · ratio) and heading · tilt; the large frame with its numbered contrast points and protect labels; the lens in large type with the horizontal angle and the lens pack name, next to aperture or T-stop, EI, shutter and filters (a long line moves down rather than being cut); focus, depth of field and frame size. If the frame has a contrast map: a zone strip 0–X with the textured range II–VIII outlined, the points at their zones (the key filled), the SBR against the target and the key’s zone, and the point list. Below, the light plan for the frame — the location visual (sketch, map or sun diagram) beside the light times (front, side left, side right, backlight, golden hour, sunset, blue hour; a missing moment shows a faint “—”) — and a note box.</li>
+        <li><strong>Frame list</strong> (A4 portrait, four frames per page) — each frame with lens, pack and angle, exposure, depth of field, a small zone strip and SBR when there is a contrast map, and two lines of the note.</li>
+        <li><strong>Technical appendix</strong> — a table at the end (landscape pages), one row per frame: frame, format · mode, ratio (protect), lens (pack), T (T–f difference), EI, angle · fps, ND · filter, focus, depth of field, CoC (standard), frame size, heading · tilt, SBR (target) and calibration.</li>
       </ul>
+      <figure class="pair">
+        <img src="img/pdf-plan.png" alt="Scout plan page">
+        <img src="img/pdf-list.png" alt="Frame list page">
+        <figcaption class="mono">Scout plan · Frame list</figcaption>
+      </figure>
+      <figure class="wide">
+        <img src="img/pdf-tech.png" alt="Technical appendix table">
+        <figcaption class="mono">Technical appendix</figcaption>
+      </figure>
     </div>
     <div class="notes"><span class="mono">Field notes</span><!-- notes: scout --></div>
   </section>
@@ -313,7 +319,7 @@
     <h2 class="big">8 · Questions and limits</h2>
     <div class="card qa">
       <h3>Does it need the internet?</h3>
-      <p>No. Everything, including the sun calculations and the PDF, runs on the iPhone. Only the satellite map of a frame needs a connection: it is fetched when the frame is saved (or later with <strong>Get the map</strong>) and then kept with the frame.</p>
+      <p>No. The app does not connect to the internet; only if you turn on the satellite map setting (Project Setup › Satellite map, off by default), a frame’s location is sent to Apple for the map image. Everything else, including the sun calculations and the PDF, runs on the iPhone.</p>
       <h3>Where are my frames?</h3>
       <p>In the app on your iPhone, and in Photos if saving there worked. They are part of your device backups. Deleting the app deletes its archive.</p>
       <h3>How accurate is the meter?</h3>
