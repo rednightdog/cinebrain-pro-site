@@ -262,7 +262,19 @@
       <h3>Scout Archive</h3>
       <p>Open it with <strong>Archive</strong> in the viewfinder. Frames are grouped by project (the active one first), then by day and scene, with the shot number under each thumbnail. Tap a frame for its details; touch and hold to delete it.</p>
       <h3>Frame details</h3>
-      <p>The saved frame, each detail in its own box (format and aspect ratio separately), the <a href="#light-plan">Light Plan</a> and a note field that saves itself.</p>
+      <p>The saved frame, each detail in its own box (format and aspect ratio separately), the <a href="#light-plan">Light Plan</a>, the location visual and a note field that saves itself.</p>
+      <h3 id="location-visual">Location visual</h3>
+      <p>Three pictures of the place can go into the PDF, to the left of the light times:</p>
+      <ul>
+        <li><strong>Sketch</strong> — <strong>Add sketch</strong>: take a photo of a hand-drawn plan or pick one from Photos (the system picker hands over only the photo you choose; no photo library access is asked). <strong>Replace sketch</strong> and <strong>Delete sketch</strong> change it.</li>
+        <li><strong>Map</strong> — when a frame has a location and the iPhone is online, a satellite image of about 150 m around the camera (north up) is saved with the frame, so the PDF can be made offline later. On it: the camera (copper dot), the lens’s field of view as a cone, the sun’s direction for each hour from sunrise to sunset with the hour, the sun’s direction when the frame was saved, and a 50 m scale. If there was no connection, <strong>Get the map</strong> in the frame details fetches it. The Apple Maps logo stays on the image.</li>
+        <li><strong>Sun diagram</strong> — the sun’s path that day seen from above, hour marks, the frame’s field of view and the sun at the frame time.</li>
+      </ul>
+      <p><strong>Show in the PDF</strong> picks one; without a choice the order is sketch, map, sun diagram. A portrait sketch keeps its proportions. The light times list stays in every case.</p>
+      <figure class="wide">
+        <img src="img/pdf-place.png" alt="PDF page: sketch and satellite map next to the light times list">
+        <figcaption class="mono">PDF · sketch and satellite map beside the light times</figcaption>
+      </figure>
       <h3>Voice notes</h3>
       <p>Next to <strong>Note</strong> there is a microphone. Touch and hold it, speak, and release: what you said is added to the end of the note. The same note card opens from the <strong>Note</strong> button beside the viewfinder’s shutter, for the last saved frame. Notes are recognized in the app’s language (English or Turkish), on your iPhone only: the sound is not recorded and nothing is sent anywhere. The first time, the app asks for Microphone and Speech Recognition access; hold the button again once you have allowed it. If your iPhone cannot recognize the app’s language on the device, the microphone is not shown and you type the note.</p>
       <h3>PDF scout report</h3>
@@ -301,7 +313,7 @@
     <h2 class="big">8 · Questions and limits</h2>
     <div class="card qa">
       <h3>Does it need the internet?</h3>
-      <p>No. Everything, including the sun calculations, runs on the iPhone.</p>
+      <p>No. Everything, including the sun calculations and the PDF, runs on the iPhone. Only the satellite map of a frame needs a connection: it is fetched when the frame is saved (or later with <strong>Get the map</strong>) and then kept with the frame.</p>
       <h3>Where are my frames?</h3>
       <p>In the app on your iPhone, and in Photos if saving there worked. They are part of your device backups. Deleting the app deletes its archive.</p>
       <h3>How accurate is the meter?</h3>

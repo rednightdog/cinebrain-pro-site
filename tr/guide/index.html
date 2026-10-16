@@ -262,7 +262,19 @@
       <h3>Keşif arşivi</h3>
       <p>Vizördeki <strong>Kayıtlar</strong> ile açılır. Kareler projeye (aktif olan en üstte), sonra güne ve sahneye göre gruplanır; her küçük karenin altında plan numarası yazar. Bilgileri için kareye dokun; silmek için basılı tut.</p>
       <h3>Kare detayı</h3>
-      <p>Kaydedilen kare, her bilgi kendi kutusunda (format ve en-boy oranı ayrı), <a href="#light-plan">Işık planı</a> ve kendiliğinden kaydedilen bir not alanı.</p>
+      <p>Kaydedilen kare, her bilgi kendi kutusunda (format ve en-boy oranı ayrı), <a href="#light-plan">Işık planı</a>, mekân görseli ve kendiliğinden kaydedilen bir not alanı.</p>
+      <h3 id="location-visual">Mekân görseli</h3>
+      <p>PDF’te ışık saatlerinin soluna mekânın üç görselinden biri girebilir:</p>
+      <ul>
+        <li><strong>Kroki</strong> — <strong>Kroki ekle</strong>: elle çizilmiş bir planın fotoğrafını çek ya da Fotoğraflar’dan seç (sistem seçicisi yalnızca seçtiğin fotoğrafı verir; fotoğraf kitaplığı izni istenmez). <strong>Krokiyi değiştir</strong> ve <strong>Krokiyi sil</strong> ile değişir.</li>
+        <li><strong>Harita</strong> — karenin konumu varsa ve iPhone internete bağlıysa kameranın çevresindeki yaklaşık 150 m’nin uydu görüntüsü (kuzey yukarı) kareyle birlikte saklanır; PDF sonra internetsiz de hazırlanır. Üzerinde: kamera (bakır nokta), lensin görüş alanı koni olarak, gün doğumundan batışa her saatin güneş yönü saatiyle, kare kaydedildiği andaki güneş yönü ve 50 m ölçeği. Bağlantı yoksa kayıt detayındaki <strong>Haritayı al</strong> getirir. Apple Haritalar logosu görüntüde kalır.</li>
+        <li><strong>Güneş diyagramı</strong> — o günün güneş yolu yukarıdan, saat işaretleri, karenin görüş alanı ve kare saatindeki güneş.</li>
+      </ul>
+      <p><strong>PDF’te göster</strong> birini seçer; seçim yoksa sıra kroki, harita, güneş diyagramıdır. Dikey kroki oranını korur. Işık saatleri listesi her durumda kalır.</p>
+      <figure class="wide">
+        <img src="img/pdf-place.png" alt="PDF sayfası: ışık saatleri listesinin yanında kroki ve uydu haritası">
+        <figcaption class="mono">PDF · ışık saatlerinin yanında kroki ve uydu haritası</figcaption>
+      </figure>
       <h3>Sesli not</h3>
       <p><strong>Not</strong>’un yanında bir mikrofon var. Basılı tut, konuş ve bırak: söylediklerin notun sonuna eklenir. Aynı not kartı, son kaydedilen kare için vizörde deklanşörün yanındaki <strong>Not</strong> düğmesinden de açılır. Notlar uygulamanın dilinde (Türkçe ya da İngilizce) ve yalnızca iPhone’unda tanınır: ses kaydedilmez, hiçbir şey bir yere gönderilmez. İlk seferde uygulama Mikrofon ve Konuşma Tanıma izni ister; izin verdikten sonra düğmeyi yeniden basılı tut. iPhone’un uygulamanın dilini cihaz içinde tanıyamıyorsa mikrofon görünmez, notu yazarak girersin.</p>
       <h3>PDF keşif dosyası</h3>
@@ -301,7 +313,7 @@
     <h2 class="big">8 · Sık sorulanlar ve sınırlar</h2>
     <div class="card qa">
       <h3>İnternet gerekiyor mu?</h3>
-      <p>Hayır. Güneş hesapları dahil her şey iPhone’da çalışır.</p>
+      <p>Hayır. Güneş hesapları ve PDF dahil her şey iPhone’da çalışır. Yalnızca karenin uydu haritası bağlantı ister: kare kaydedilirken (ya da sonra <strong>Haritayı al</strong> ile) alınır ve kareyle saklanır.</p>
       <h3>Karelerim nerede?</h3>
       <p>iPhone’undaki uygulamada ve kaydetme başarılıysa Fotoğraflar’da. Cihaz yedeklerine dahildir. Uygulamayı silmek arşivini de siler.</p>
       <h3>Pozometre ne kadar doğru?</h3>
